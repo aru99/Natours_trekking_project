@@ -71,6 +71,8 @@ body {
 .heading_primary {
   color: #fff;
   text-transform: uppercase;
+  /* for smooth animation of the headings */
+  backface-visibility: hidden;
 }
 
 .heading_primary_main {
@@ -78,6 +80,11 @@ body {
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+
+  /* animation property */
+  animation-name: move_in_left;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
 }
 
 .heading_primary_sub {
@@ -85,4 +92,40 @@ body {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
+
+  /* animation propperties */
+  animation: move_in_right 1.5s ease-out;
+  /* animation-name: move_in_right;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out; */
+}
+
+/* adding animation to the heading  moveinleft*/
+@keyframes move_in_left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* adding animation to the heading  moveinright*/
+@keyframes move_in_right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translate(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
