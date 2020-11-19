@@ -39,6 +39,8 @@ body {
 /* ================================= */
 /* Resuable */
 /* ================================= */
+/*  */
+/*  */
 /* ----------animations--------------- */
 /* adding animation for the moveinleft*/
 @keyframes move_in_left {
@@ -70,6 +72,18 @@ body {
   }
 }
 
+/* animation for move_in_bottom */
+@keyframes move_in_bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 /* ----------button---------------- */
 
 .btn:link,
@@ -81,6 +95,7 @@ body {
   padding: 15px 40px;
   border-radius: 100px;
   transition: all 0.2s;
+  position: relative;
 }
 
 .btn:hover {
@@ -99,6 +114,32 @@ body {
   display: inline-block;
 }
 
+.btn_animated {
+  animation: move_in_bottom 0.5s ease-out 0.75;
+  animation-fill-mode: backwards;
+}
+
+/* pseudo elements for the button */
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn_white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
 /* ================================= */
 /* Header */
 /* ================================= */
