@@ -1,3 +1,7 @@
+/* ================================= */
+/* Style guide */
+/* ================================= */
+
 /*
 COLORS:
 
@@ -6,7 +10,9 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-
+/* ================================= */
+/* basic setup*/
+/* ================================= */
 /* global reset */
 * {
   margin: 0;
@@ -28,6 +34,69 @@ body {
 /* border for testing */
 .GB {
   /* border: 1px solid red; */
+}
+
+/* ================================= */
+/* Resuable */
+/* ================================= */
+/* ----------animations--------------- */
+/* adding animation for the moveinleft*/
+@keyframes move_in_left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* adding animation for the moveinright*/
+@keyframes move_in_right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translate(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* ----------button---------------- */
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  padding: 15px 40px;
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn_white {
+  background-color: #fff;
+  color: #777;
+  display: inline-block;
 }
 
 /* ================================= */
@@ -67,12 +136,15 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* cenntres the text in the text_box including the button */
+  text-align: center;
 }
 .heading_primary {
   color: #fff;
   text-transform: uppercase;
   /* for smooth animation of the headings */
   backface-visibility: hidden;
+  margin-bottom: 30px;
 }
 
 .heading_primary_main {
@@ -98,34 +170,4 @@ body {
   /* animation-name: move_in_right;
   animation-duration: 1.5s;
   animation-timing-function: ease-out; */
-}
-
-/* adding animation to the heading  moveinleft*/
-@keyframes move_in_left {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  80% {
-    transform: translateX(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-/* adding animation to the heading  moveinright*/
-@keyframes move_in_right {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  80% {
-    transform: translate(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
 }
