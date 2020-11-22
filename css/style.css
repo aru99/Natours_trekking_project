@@ -117,13 +117,13 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn_white {
+.btn--white {
   background-color: #fff;
   color: #777;
   display: inline-block;
 }
 
-.btn_animated {
+.btn--animated {
   animation: move_in_bottom 0.5s ease-out 0.75;
   animation-fill-mode: backwards;
 }
@@ -164,23 +164,23 @@ body {
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
-
+  border-radius: 2rem 2rem 0 0;
   /* adding the clip style */
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 }
 
-.logo_box {
+.header__logo_box {
   /* child of header  */
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
-.text_box {
+.header__text_box {
   /* child of header */
   position: absolute;
   top: 40%;
@@ -189,7 +189,7 @@ body {
   /* cenntres the text in the text_box including the button */
   text-align: center;
 }
-.heading_primary {
+.heading-primary {
   color: #fff;
   text-transform: uppercase;
   /* for smooth animation of the headings */
@@ -197,7 +197,7 @@ body {
   margin-bottom: 3rem;
 }
 
-.heading_primary_main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -209,7 +209,7 @@ body {
   animation-timing-function: ease-out;
 }
 
-.heading_primary_sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
