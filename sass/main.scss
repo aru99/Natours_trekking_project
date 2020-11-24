@@ -21,6 +21,8 @@ $color-grey-dark: #777;
 $color-white: #fff;
 $color-black: #000;
 
+$testing-border-color: #ff0101;
+
 /* ================================= */
 /* basic setup*/
 /* ================================= */
@@ -52,7 +54,7 @@ body {
 
 /* border for testing */
 .GB {
-  border: 1px solid red;
+  border: 1px solid $testing-border-color;
 }
 
 /* ================================= */
@@ -105,38 +107,40 @@ body {
 
 /* ----------button---------------- */
 
-.btn:link,
-.btn:visited {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  letter-spacing: 0.2rem;
-  word-spacing: 0.1rem;
-  padding: 1.5rem 4rem;
-  border-radius: 10rem;
-  transition: all 0.2s;
-  position: relative;
-}
+.btn {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.1rem;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+  }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-}
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
 
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-}
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
 
-.btn--white {
-  background-color: $color-white;
-  color: $color-grey-dark;
-  display: inline-block;
-}
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+    display: inline-block;
+  }
 
-.btn--animated {
-  animation: move_in_bottom 0.5s ease-out 0.75;
-  animation-fill-mode: backwards;
+  &--animated {
+    animation: move_in_bottom 0.5s ease-out 0.75;
+    animation-fill-mode: backwards;
+  }
 }
 
 /* pseudo elements for the button */

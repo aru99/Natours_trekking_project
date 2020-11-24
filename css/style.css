@@ -40,7 +40,7 @@ body {
 
 /* border for testing */
 .GB {
-  border: 1px solid red; }
+  border: 1px solid #ff0101; }
 
 /* ================================= */
 /* Resuable */
@@ -80,8 +80,7 @@ body {
     transform: translate(0); } }
 
 /* ----------button---------------- */
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.6rem;
