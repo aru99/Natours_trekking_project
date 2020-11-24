@@ -1,0 +1,38 @@
+.header {
+  /* parent for logo, text_box */
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.801),
+      rgba($color-primary-dark, 0.801)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  border-radius: 2rem 2rem 0 0;
+  /* adding the clip style */
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+
+  // ------nested_rules--------
+  &__logo_box {
+    /* child of header  */
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__text_box {
+    /* child of header */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* cenntres the text in the text_box including the button */
+    text-align: center;
+  }
+}
