@@ -1,7 +1,6 @@
 /* ================================= */
 /* Style guide */
 /* ================================= */
-
 /*
 COLORS:
 
@@ -11,6 +10,9 @@ Dark green: #28b485
 
 */
 /* ================================= */
+/* variables*/
+/* ================================= */
+/* ================================= */
 /* basic setup*/
 /* ================================= */
 /* global reset */
@@ -19,13 +21,11 @@ Dark green: #28b485
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 html {
   /* this will make it easy for us to calculate rem  */
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 body {
   font-family: "Lato", sans-serif;
@@ -35,14 +35,12 @@ body {
   color: #777;
   /* adding the padding around the entire body */
   padding: 2rem;
-  background-color: rgba(238, 235, 235, 0.938);
-  box-sizing: border-box;
-}
+  background-color: #eeebebef;
+  box-sizing: border-box; }
 
 /* border for testing */
 .GB {
-  border: 1px solid red;
-}
+  border: 1px solid red; }
 
 /* ================================= */
 /* Resuable */
@@ -54,46 +52,34 @@ body {
 @keyframes move_in_left {
   0% {
     opacity: 0;
-    transform: translateX(-10rem);
-  }
+    transform: translateX(-10rem); }
   80% {
-    transform: translateX(1rem);
-  }
+    transform: translateX(1rem); }
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 /* adding animation for the moveinright*/
 @keyframes move_in_right {
   0% {
     opacity: 0;
-    transform: translateX(10rem);
-  }
+    transform: translateX(10rem); }
   80% {
-    transform: translate(-3rem);
-  }
+    transform: translate(-3rem); }
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 /* animation for move_in_bottom */
 @keyframes move_in_bottom {
   0% {
     opacity: 0;
-    transform: translateY(3rem);
-  }
+    transform: translateY(3rem); }
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 /* ----------button---------------- */
-
 .btn:link,
 .btn:visited {
   text-decoration: none;
@@ -104,29 +90,24 @@ body {
   padding: 1.5rem 4rem;
   border-radius: 10rem;
   transition: all 0.2s;
-  position: relative;
-}
+  position: relative; }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--white {
   background-color: #fff;
   color: #777;
-  display: inline-block;
-}
+  display: inline-block; }
 
 .btn--animated {
   animation: move_in_bottom 0.5s ease-out 0.75;
-  animation-fill-mode: backwards;
-}
+  animation-fill-mode: backwards; }
 
 /* pseudo elements for the button */
 /* .btn::after {
@@ -156,68 +137,50 @@ body {
   /* parent for logo, text_box */
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.801),
-      rgba(40, 180, 133, 0.801)
-    ),
-    url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.801)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   border-radius: 2rem 2rem 0 0;
   /* adding the clip style */
-  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-}
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
+  .header__logo_box {
+    /* child of header  */
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text_box {
+    /* child of header */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* cenntres the text in the text_box including the button */
+    text-align: center; }
 
-.header__logo_box {
-  /* child of header  */
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-
-.header__logo {
-  height: 3.5rem;
-}
-
-.header__text_box {
-  /* child of header */
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* cenntres the text in the text_box including the button */
-  text-align: center;
-}
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   /* for smooth animation of the headings */
   backface-visibility: hidden;
-  margin-bottom: 3rem;
-}
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-
-  /* animation property */
-  animation-name: move_in_left;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
-}
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.74rem;
-
-  /* animation propperties */
-  animation: move_in_right 1.5s ease-out;
-  /* animation-name: move_in_right;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out; */
-}
+  margin-bottom: 3rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    /* animation property */
+    animation-name: move_in_left;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    /* animation propperties */
+    animation: move_in_right 1.5s ease-out;
+    /* animation-name: move_in_right;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out; */ }
