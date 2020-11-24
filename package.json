@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Laniding page for Natours trekking company",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aru99/Natours_trekking_project.git"
+  },
+  "author": "Arman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aru99/Natours_trekking_project/issues"
+  },
+  "homepage": "https://github.com/aru99/Natours_trekking_project#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
