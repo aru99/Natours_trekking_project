@@ -1,54 +1,6 @@
 /* ================================= */
-/* Style guide */
-/* ================================= */
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-/* ================================= */
 /* variables*/
 /* ================================= */
-/* ================================= */
-/* basic setup*/
-/* ================================= */
-/* global reset */
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  /* this will make it easy for us to calculate rem  */
-  font-size: 62.5%; }
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
-  /* adding the padding around the entire body */
-  padding: 2rem;
-  background-color: #eeebebef;
-  box-sizing: border-box; }
-
-/* border for testing */
-.GB {
-  border: 1px solid #ff0101; }
-
-/* ================================= */
-/* Resuable */
-/* ================================= */
-/*  */
-/*  */
-/* ----------animations--------------- */
-/* adding animation for the moveinleft*/
 @keyframes move_in_left {
   0% {
     opacity: 0;
@@ -79,7 +31,56 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-/* ----------button---------------- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /* this will make it easy for us to calculate rem  */
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  /* adding the padding around the entire body */
+  padding: 2rem;
+  background-color: #eeebebef; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /* for smooth animation of the headings */
+  backface-visibility: hidden;
+  margin-bottom: 3rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    /* animation property */
+    animation-name: move_in_left;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    /* animation propperties */
+    animation: move_in_right 1.5s ease-out;
+    /* animation-name: move_in_right;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-out; */ }
+
 .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
@@ -108,30 +109,6 @@ body {
   animation: move_in_bottom 0.5s ease-out 0.75;
   animation-fill-mode: backwards; }
 
-/* pseudo elements for the button */
-/* .btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-}
-.btn_white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-} */
-/* ================================= */
-/* Header */
-/* ================================= */
 .header {
   /* parent for logo, text_box */
   position: relative;
@@ -158,28 +135,6 @@ body {
     /* cenntres the text in the text_box including the button */
     text-align: center; }
 
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  /* for smooth animation of the headings */
-  backface-visibility: hidden;
-  margin-bottom: 3rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    /* animation property */
-    animation-name: move_in_left;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-out; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.74rem;
-    /* animation propperties */
-    animation: move_in_right 1.5s ease-out;
-    /* animation-name: move_in_right;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-out; */ }
+/* border for testing */
+.GB {
+  border: 1px solid #ff0101; }
