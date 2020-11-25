@@ -12,7 +12,7 @@
   background-position: top;
   border-radius: 2rem 2rem 0 0;
   /* adding the clip style */
-  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   // ------nested_rules--------
   &__logo_box {
