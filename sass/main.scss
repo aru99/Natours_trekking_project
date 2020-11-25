@@ -11,8 +11,10 @@
 // ---component_folder_import
 @import "./components/button";
 
-// ---header_component_import
+// ---layout_import
+@import "./layout/grid";
 @import "./layout/header";
+
 // ---pages_folder_import
 @import "./pages/home";
 
