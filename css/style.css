@@ -96,7 +96,9 @@ body {
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.4rem; }
 
 .paragraph {
   font-size: 1.6rem;
@@ -116,6 +118,34 @@ body {
 
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 0.2rem;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 1rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: 0; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 3rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 9rem; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #55c57a;
+      transform: scale(1.05) translateY(-0.5rem);
+      border-radius: 1rem;
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.9); }
 
 .btn:link, .btn:visited {
   text-decoration: none;
@@ -223,3 +253,5 @@ body {
   margin-top: -20vh; }
 
 /* border for testing */
+.GB {
+  border: 1px solid #ff0101; }
