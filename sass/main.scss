@@ -9,6 +9,9 @@
 @import "./base/typography";
 @import "./base/utilities";
 // ---component_folder_import
+@import "./components/bg-video";
+@import "./components/story";
+@import "./components/cards";
 @import "./components/feature-box";
 @import "./components/composition";
 @import "./components/button";
@@ -22,5 +25,5 @@
 
 /* border for testing */
 .GB {
-  //   border: 1px solid $testing-border-color;
+  border: 1px solid $testing-border-color;
 }
