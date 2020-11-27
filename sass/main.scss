@@ -18,6 +18,7 @@
 @import "./components/button";
 
 // ---layout_import
+@import "./layout/footer";
 @import "./layout/grid";
 @import "./layout/header";
 
@@ -26,5 +27,5 @@
 
 /* border for testing */
 .GB {
-  //   border: 1px solid $testing-border-color;
+  // border: 1px solid $testing-border-color;
 }
