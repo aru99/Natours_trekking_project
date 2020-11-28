@@ -21,11 +21,12 @@
 @import "./layout/footer";
 @import "./layout/grid";
 @import "./layout/header";
+@import "./layout/navigation";
 
 // ---pages_folder_import
 @import "./pages/home";
 
 /* border for testing */
 .GB {
-  // border: 1px solid $testing-border-color;
+  border: 1px solid $testing-border-color;
 }
