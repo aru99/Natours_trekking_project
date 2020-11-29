@@ -27,4 +27,9 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 2rem;
+  // media query
+  @include respond(tab-port) {
+    padding: 0; //1 rem = 8px, 8px/16 = 50%
+  }
 }

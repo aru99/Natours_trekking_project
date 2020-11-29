@@ -5,7 +5,7 @@ body {
   line-height: 1.7;
   color: $color-grey-dark;
   /* adding the padding around the entire body */
-  padding: 2rem;
+
   background-color: #eeebebef;
 }
 
@@ -22,6 +22,12 @@ body {
     font-weight: 400;
     letter-spacing: 3.5rem;
 
+    // media query
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+
     /* animation property */
     animation-name: move_in_left;
     animation-duration: 1.5s;
@@ -33,6 +39,12 @@ body {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.74rem;
+
+    // media query
+    @include respond(phone) {
+      letter-spacing: 0.3rem;
+      font-size: 2rem;
+    }
 
     /* animation propperties */
     animation: move_in_right 1.5s ease-out;
@@ -57,6 +69,15 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   transition: all 0.5s;
+
+  // media query
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  // media query
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(0deg) skewX(0deg) scale(0.98);
